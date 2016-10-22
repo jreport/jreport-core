@@ -34,5 +34,5 @@ public interface Report extends Serializable {
 	/**
 	 * 
 	 */
-	ReportOutputStream buildReport();
+	ReportOutputData buildReport();
 }

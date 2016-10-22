@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import br.jreport.core.api.ClassReport;
 import br.jreport.core.api.Report;
-import br.jreport.core.api.ReportOutputStream;
+import br.jreport.core.api.ReportOutputData;
 
 /**
  * Classe motora de geração de relatórios.
@@ -28,7 +28,7 @@ public class JReportEngine implements Serializable {
 	 *            Implementação de Report correspondente.
 	 * @return OutputStream do relatório.
 	 */
-	public static <C extends ClassReport, R extends Report> ReportOutputStream generate(C classReport, R report) {
+	public static <C extends ClassReport, R extends Report> ReportOutputData generate(C classReport, R report) {
 		return classReport.create(report);
 	}
 }

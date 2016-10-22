@@ -2,7 +2,7 @@ package br.jreport.core;
 
 import br.jreport.core.api.ClassReport;
 import br.jreport.core.api.Report;
-import br.jreport.core.api.ReportOutputStream;
+import br.jreport.core.api.ReportOutputData;
 import br.jreport.core.datasource.LocalVotacaoDS;
 import br.jreport.core.datasource.PontoTransmissaoDS;
 
@@ -16,7 +16,7 @@ public class DemoReport implements ClassReport {
 	private PontoTransmissaoDS pontoTransmissaoDS = new PontoTransmissaoDS();
 
 	@Override
-	public ReportOutputStream create(Report report) {
+	public ReportOutputData create(Report report) {
 		//@formatter:off
 		return report
 			.title()

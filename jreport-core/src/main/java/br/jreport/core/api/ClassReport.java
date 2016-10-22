@@ -14,5 +14,5 @@ public interface ClassReport extends Serializable {
 	 * 
 	 * @param report
 	 */
-	ReportOutputStream create(Report report);
+	ReportOutputData create(Report report);
 }
