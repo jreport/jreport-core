@@ -1,4 +1,4 @@
-package br.jreport.core;
+package br.jreport.core.api;
 
 import java.io.Serializable;
 
@@ -14,5 +14,5 @@ public interface ClassReport extends Serializable {
 	 * 
 	 * @param report
 	 */
-	void create(Report report);
+	ReportOutputStream create(Report report);
 }
