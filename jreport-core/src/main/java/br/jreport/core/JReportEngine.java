@@ -28,7 +28,7 @@ public class JReportEngine implements Serializable {
 	 *            Implementação de Report correspondente.
 	 * @return OutputStream do relatório.
 	 */
-	public static <R extends Report> ReportOutputStream generate(ClassReport classReport, R report) {
+	public static <C extends ClassReport, R extends Report> ReportOutputStream generate(C classReport, R report) {
 		return classReport.create(report);
 	}
 }
