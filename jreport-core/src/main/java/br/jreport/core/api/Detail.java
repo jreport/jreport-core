@@ -3,6 +3,7 @@ package br.jreport.core.api;
 import java.io.Serializable;
 import java.util.function.BiConsumer;
 
+import br.jreport.core.api.adapter.TableAdapter;
 import br.jreport.core.api.datasource.Datasource;
 
 /**
@@ -32,7 +33,7 @@ public interface Detail extends Serializable {
 	 * 
 	 * @return
 	 */
-	<T, D extends Datasource<T>> Detail table(D dataSource);
+	<T, A extends TableAdapter<T>, D extends Datasource<T>> Detail table(D dataSource,A tableAdapter);
 
 	/**
 	 * 
@@ -40,7 +41,7 @@ public interface Detail extends Serializable {
 	 * @param eachRow
 	 * @return
 	 */
-	<T, D extends Datasource<T>> Detail table(D dataSource, BiConsumer<T, TableRow> eachRow);
+	<T, A extends TableAdapter<T>, D extends Datasource<T>> Detail table(D dataSource, A tableAdapter, BiConsumer<T, TableRow> eachRow);
 
 	/**
 	 * 
