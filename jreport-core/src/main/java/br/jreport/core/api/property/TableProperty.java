@@ -1,4 +1,4 @@
-package br.jreport.core.api.adapter;
+package br.jreport.core.api.property;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,13 @@ import br.jreport.core.api.TableColumn;
 import br.jreport.core.api.TableHeader;
 import br.jreport.core.api.datasource.Datasource;
 
-public interface TableAdapter<T> extends Serializable {
+/**
+ * 
+ * @author jcruz
+ *
+ * @param <T>
+ */
+public interface TableProperty<T> extends Serializable {
 
 	Datasource<T> getDatasource();
 

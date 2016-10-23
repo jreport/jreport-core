@@ -3,6 +3,12 @@ package br.jreport.core.api;
 import java.io.Serializable;
 import java.util.Optional;
 
+/**
+ * 
+ * 
+ * @author jcruz
+ *
+ */
 public class TableColumn implements Serializable {
 
 	/**

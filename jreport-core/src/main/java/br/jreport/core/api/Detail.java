@@ -2,10 +2,12 @@ package br.jreport.core.api;
 
 import java.util.function.BiConsumer;
 
-import br.jreport.core.api.adapter.TableAdapter;
 import br.jreport.core.api.datasource.Datasource;
+import br.jreport.core.api.property.TableProperty;
 
 /**
+ * 
+ * Classe que contem a estrutura de detalhes do relatório.
  * 
  * @author jcruz
  *
@@ -36,10 +38,11 @@ public interface Detail extends Region {
 	Detail newLine();
 
 	/**
+	 * Definição de tabela.
 	 * 
 	 * @return
 	 */
-	<T, A extends TableAdapter<T>> Detail table(A tableAdapter);
+	<T, A extends TableProperty<T>> Detail table(A tableProperty);
 
 	/**
 	 * 
@@ -47,7 +50,7 @@ public interface Detail extends Region {
 	 * @param eachRow
 	 * @return
 	 */
-	<T, A extends TableAdapter<T>> Detail table(A tableAdapter, BiConsumer<T, TableRow> eachRow);
+	<T, A extends TableProperty<T>> Detail table(A tableProperty, BiConsumer<T, TableRow> eachRow);
 
 	/**
 	 * 
