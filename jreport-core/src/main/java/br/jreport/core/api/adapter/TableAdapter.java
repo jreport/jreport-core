@@ -19,4 +19,9 @@ public interface TableAdapter<T> extends Serializable {
 	default int numColumns() {
 		return getHeaders().size();
 	}
+
+	default Optional<TableColumn> getSummaryColumn(T item, int columnIndex) {
+		return Optional.empty();
+	}
+
 }
