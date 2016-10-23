@@ -16,5 +16,7 @@ public interface TableAdapter<T> extends Serializable {
 
 	List<TableHeader> getHeaders();
 
-	int numColumns();
+	default int numColumns() {
+		return getHeaders().size();
+	}
 }
