@@ -1,5 +1,7 @@
 package br.jreport.core.api;
 
-public interface Text extends ReportElement {
+import java.io.Serializable;
 
+public interface Text extends Serializable {
+	void build();
 }
