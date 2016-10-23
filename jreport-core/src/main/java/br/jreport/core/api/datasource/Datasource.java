@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface Datasource<T> extends Serializable {
 
-	List<T> get();
+	List<T> getList();
 
 	Optional<String> emptyMessage();
 }

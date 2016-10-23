@@ -1,14 +1,12 @@
 package br.jreport.core.api;
 
-import java.io.Serializable;
-
 /**
  * Classe da região titulo
  * 
  * @author jcruz
  *
  */
-public interface Title extends Serializable {
+public interface Title extends Region {
 
 	/**
 	 * 
@@ -31,14 +29,13 @@ public interface Title extends Serializable {
 	 * 
 	 * @return
 	 */
-	Title line();
+	Title newLine();
 
 	/**
 	 * 
-	 * @param value
 	 * @return
 	 */
-	Title line(int value);
+	Title newPage();
 
 	/**
 	 * Monta a região de título.

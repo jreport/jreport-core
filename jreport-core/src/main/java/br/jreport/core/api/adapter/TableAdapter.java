@@ -4,10 +4,17 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
+import br.jreport.core.api.TableColumn;
+import br.jreport.core.api.TableHeader;
+import br.jreport.core.api.datasource.Datasource;
+
 public interface TableAdapter<T> extends Serializable {
 
-	Optional<String> getColumnValue(T item, int columnIndex);
+	Datasource<T> getDatasource();
 
-	List<String> getHeaders();
+	Optional<TableColumn> getColumn(T item, int columnIndex);
 
+	List<TableHeader> getHeaders();
+
+	int numColumns();
 }

@@ -1,6 +1,5 @@
 package br.jreport.core.api;
 
-import java.io.Serializable;
 import java.util.function.BiConsumer;
 
 import br.jreport.core.api.adapter.TableAdapter;
@@ -11,7 +10,7 @@ import br.jreport.core.api.datasource.Datasource;
  * @author jcruz
  *
  */
-public interface Detail extends Serializable {
+public interface Detail extends Region {
 	/**
 	 * 
 	 * Definição de imagem;
@@ -30,10 +29,17 @@ public interface Detail extends Serializable {
 	Detail text(String text);
 
 	/**
+	 * Nova linha.
 	 * 
 	 * @return
 	 */
-	<T, A extends TableAdapter<T>, D extends Datasource<T>> Detail table(D dataSource,A tableAdapter);
+	Detail newLine();
+
+	/**
+	 * 
+	 * @return
+	 */
+	<T, A extends TableAdapter<T>> Detail table(A tableAdapter);
 
 	/**
 	 * 
@@ -41,7 +47,7 @@ public interface Detail extends Serializable {
 	 * @param eachRow
 	 * @return
 	 */
-	<T, A extends TableAdapter<T>, D extends Datasource<T>> Detail table(D dataSource, A tableAdapter, BiConsumer<T, TableRow> eachRow);
+	<T, A extends TableAdapter<T>> Detail table(Class<A> tableAdapter, BiConsumer<T, TableRow> eachRow);
 
 	/**
 	 * 
