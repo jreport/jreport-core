@@ -47,7 +47,7 @@ public interface Detail extends Region {
 	 * @param eachRow
 	 * @return
 	 */
-	<T, A extends TableAdapter<T>> Detail table(Class<A> tableAdapter, BiConsumer<T, TableRow> eachRow);
+	<T, A extends TableAdapter<T>> Detail table(A tableAdapter, BiConsumer<T, TableRow> eachRow);
 
 	/**
 	 * 
