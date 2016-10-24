@@ -11,28 +11,17 @@ public class StyleClass implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String selector;
+	private Map<String, StyleElement> element;
 
-	private Map<String, Object> style;
-
-	public String getSelector() {
-		return selector;
-	}
-
-	public void setSelector(String selector) {
-		this.selector = selector;
-	}
-
-	public Map<String, Object> getStyle() {
-		if (this.style == null) {
-			this.style = new HashMap<>();
+	public Map<String, StyleElement> getElement() {
+		if (this.element == null) {
+			this.element = new HashMap<>();
 		}
-		return style;
+		return element;
 	}
 
-	public void setStyle(Map<String, Object> style) {
-		this.style = style;
+	public void setElement(Map<String, StyleElement> styleElement) {
+		this.element = styleElement;
 	}
-	
 
 }
