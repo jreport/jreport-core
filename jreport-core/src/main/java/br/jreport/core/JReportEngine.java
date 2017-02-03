@@ -31,4 +31,34 @@ public class JReportEngine implements Serializable {
 	public static <C extends ClassReport, R extends Report> ReportOutputData generate(C classReport, R report) {
 		return classReport.create(report);
 	}
+
+	/**
+	 * Gera o relatório
+	 * 
+	 * @param classReport
+	 *            Estrutura de relatório para geração.
+	 * @param report
+	 *            Implementação de Report correspondente.
+	 * @return OutputStream do relatório.
+	 */
+	public static <C extends ClassReport> String serialize(C classReport) {
+		throw new UnsupportedOperationException("Não implementado");
+		// return classReport.serialization(classReport);
+	}
+
+	/**
+	 * Gera o relatório
+	 * 
+	 * @param classReport
+	 *            Estrutura de relatório para geração.
+	 * @param report
+	 *            Implementação de Report correspondente.
+	 * @return OutputStream do relatório.
+	 */
+	public static <C extends ClassReport, R extends Report> ReportOutputData deserialize(String serialized, R report) {
+		// desserialize(serialized);
+		// create report on report like: report.title().text(text)
+		throw new UnsupportedOperationException("Não implementado");
+		// return report.buildReport();
+	}
 }

@@ -14,5 +14,15 @@ public interface ClassReport extends Serializable {
 	 * 
 	 * @param report
 	 */
-	ReportOutputData create(Report report);
+	default ReportOutputData create(Report report) {
+		return templateReport(report).buildReport();
+	}
+
+	Report templateReport(Report report);
+
+	default <C extends ClassReport> String serialization(C classReport) {
+
+		return null;
+	}
+
 }
