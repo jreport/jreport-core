@@ -13,6 +13,7 @@ import br.jreport.core.api.property.TableProperty;
  *
  */
 public interface Detail extends Region {
+
 	/**
 	 * 
 	 * Definição de imagem;
@@ -20,7 +21,9 @@ public interface Detail extends Region {
 	 * @param src
 	 * @return
 	 */
-	Detail image(String src);
+	Detail addImage(String src);
+
+	Detail addImage(String src, String classe);
 
 	/**
 	 * Definição de texto.
@@ -28,21 +31,36 @@ public interface Detail extends Region {
 	 * @param text
 	 * @return
 	 */
-	Detail text(String text);
+	Detail addText(String text);
+
+	Detail addText(String text, String classe);
 
 	/**
-	 * Nova linha.
 	 * 
 	 * @return
 	 */
-	Detail newLine();
+	Detail addNewLine();
+
+	/**
+	 * 
+	 * @return
+	 */
+	Detail addSeparator();
+
+	/**
+	 * 
+	 * @return
+	 */
+	Detail addNewPage();
 
 	/**
 	 * Definição de tabela.
 	 * 
 	 * @return
 	 */
-	<T, A extends TableProperty<T>> Detail table(A tableProperty);
+	<T, A extends TableProperty<T>> Detail addTable(A tableProperty);
+
+	<T, A extends TableProperty<T>> Detail addTable(A tableProperty, String classe);
 
 	/**
 	 * 
@@ -50,13 +68,17 @@ public interface Detail extends Region {
 	 * @param eachRow
 	 * @return
 	 */
-	<T, A extends TableProperty<T>> Detail table(A tableProperty, BiConsumer<T, TableRow> eachRow);
+	<T, A extends TableProperty<T>> Detail addTable(A tableProperty, BiConsumer<T, TableRow> eachRow);
+
+	<T, A extends TableProperty<T>> Detail addTable(A tableProperty, BiConsumer<T, TableRow> eachRow, String classe);
 
 	/**
 	 * 
 	 * @return
 	 */
-	<T, D extends Datasource<T>> Detail list(D datasource);
+	<T, D extends Datasource<T>> Detail addList(D datasource);
+
+	<T, D extends Datasource<T>> Detail addList(D datasource, String classe);
 
 	/**
 	 * Monta a região de título.

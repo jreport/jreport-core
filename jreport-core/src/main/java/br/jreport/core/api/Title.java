@@ -15,7 +15,9 @@ public interface Title extends Region {
 	 * @param src
 	 * @return
 	 */
-	Title image(String src);
+	Title addImage(String src);
+
+	Title addImage(String src, String classe);
 
 	/**
 	 * Definição de texto.
@@ -23,19 +25,27 @@ public interface Title extends Region {
 	 * @param text
 	 * @return
 	 */
-	Title text(String text);
+	Title addText(String text);
+
+	Title addText(String text, String classe);
 
 	/**
 	 * 
 	 * @return
 	 */
-	Title newLine();
+	Title addNewLine();
 
 	/**
 	 * 
 	 * @return
 	 */
-	Title newPage();
+	Title addSeparator();
+
+	/**
+	 * 
+	 * @return
+	 */
+	Title addNewPage();
 
 	/**
 	 * Monta a região de título.

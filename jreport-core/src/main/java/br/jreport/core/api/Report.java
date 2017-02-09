@@ -35,4 +35,5 @@ public interface Report extends Serializable {
 	 * 
 	 */
 	ReportOutputData buildReport();
+
 }
