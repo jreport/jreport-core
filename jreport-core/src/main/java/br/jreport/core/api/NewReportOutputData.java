@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface ReportOutputData extends Serializable {
+public interface NewReportOutputData extends Serializable {
 
 	/**
 	 * 

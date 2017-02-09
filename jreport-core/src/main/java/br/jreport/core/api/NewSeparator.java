@@ -3,11 +3,11 @@ package br.jreport.core.api;
 import java.io.Serializable;
 
 /**
- * Região do relatório.
+ * Nova linha.
  * 
  * @author jcruz
  *
  */
-public interface Region extends Serializable {
-
+public interface NewSeparator extends Serializable {
+	void build();
 }

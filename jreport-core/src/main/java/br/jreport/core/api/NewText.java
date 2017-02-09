@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface Text extends Serializable {
+public interface NewText extends Serializable {
 	/**
 	 * 
 	 */

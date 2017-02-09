@@ -8,7 +8,7 @@ import java.util.function.BiConsumer;
  * @author jcruz
  *
  */
-public interface Table<T> extends Serializable {
+public interface NewTable<T> extends Serializable {
 
 	/**
 	 * 
@@ -19,6 +19,6 @@ public interface Table<T> extends Serializable {
 	 * 
 	 * @param row
 	 */
-	void build(BiConsumer<T, TableRow> row);
+	void build(BiConsumer<T, NewTableRow> row);
 
 }

@@ -1,6 +1,6 @@
 package br.jreport.core.api;
 
-public interface Footer extends Region {
+public interface NewFooter extends NewRegion {
 
 	/**
 	 * 
@@ -9,7 +9,7 @@ public interface Footer extends Region {
 	 * @param src
 	 * @return
 	 */
-	Title image(String src);
+	NewTitle image(String src);
 
 	/**
 	 * Definição de texto.
@@ -17,12 +17,12 @@ public interface Footer extends Region {
 	 * @param text
 	 * @return
 	 */
-	Title text(String text);
+	NewTitle text(String text);
 
 	/**
 	 * Monta a região de título.
 	 * 
 	 * @return
 	 */
-	Report build();
+	NewReport build();
 }

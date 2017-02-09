@@ -5,11 +5,10 @@ import java.util.Optional;
 
 /**
  * 
- * 
  * @author jcruz
  *
  */
-public class TableColumn implements Serializable {
+public class NewTableHeader implements Serializable {
 
 	/**
 	 * 
@@ -18,11 +17,11 @@ public class TableColumn implements Serializable {
 
 	private String text;
 
-	private TableColumn() {
+	public NewTableHeader() {
 		super();
 	}
 
-	private TableColumn(String text) {
+	private NewTableHeader(String text) {
 		super();
 		this.text = text;
 	}
@@ -31,10 +30,11 @@ public class TableColumn implements Serializable {
 		return text;
 	}
 
-	public static Optional<TableColumn> of(String text) {
+	public static Optional<NewTableHeader> of(String text) {
 		if (text != null) {
-			return Optional.of(new TableColumn(text));
+			return Optional.of(new NewTableHeader(text));
 		}
 		return Optional.empty();
 	}
+
 }

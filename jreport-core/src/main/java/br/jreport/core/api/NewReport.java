@@ -8,31 +8,32 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface Report extends Serializable {
+public interface NewReport extends Serializable {
 
 	/**
 	 * Regiao do título.
 	 * 
 	 * @return
 	 */
-	Title title();
+	NewTitle title();
 
 	/**
 	 * Região dos detalhes;
 	 * 
 	 * @return
 	 */
-	Detail detail();
+	NewDetail detail();
 
 	/**
 	 * Região do rodapé.
 	 * 
 	 * @return
 	 */
-	Footer footer();
+	NewFooter footer();
 
 	/**
 	 * 
 	 */
-	ReportOutputData buildReport();
+	NewReportOutputData buildReport();
+
 }

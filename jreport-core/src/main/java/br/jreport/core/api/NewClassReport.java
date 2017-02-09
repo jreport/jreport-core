@@ -8,19 +8,19 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface ClassReport extends Serializable {
+public interface NewClassReport extends Serializable {
 
 	/**
 	 * 
 	 * @param report
 	 */
-	default ReportOutputData create(Report report) {
+	default NewReportOutputData create(NewReport report) {
 		return templateReport(report).buildReport();
 	}
 
-	Report templateReport(Report report);
+	NewReport templateReport(NewReport report);
 
-	default <C extends ClassReport> String serialization(C classReport) {
+	default <C extends NewClassReport> String serialization(C classReport) {
 
 		return null;
 	}

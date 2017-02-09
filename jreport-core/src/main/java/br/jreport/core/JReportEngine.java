@@ -2,9 +2,9 @@ package br.jreport.core;
 
 import java.io.Serializable;
 
-import br.jreport.core.api.ClassReport;
-import br.jreport.core.api.Report;
-import br.jreport.core.api.ReportOutputData;
+import br.jreport.core.api.NewClassReport;
+import br.jreport.core.api.NewReport;
+import br.jreport.core.api.NewReportOutputData;
 
 /**
  * Classe motora de geração de relatórios.
@@ -28,7 +28,7 @@ public class JReportEngine implements Serializable {
 	 *            Implementação de Report correspondente.
 	 * @return OutputStream do relatório.
 	 */
-	public static <C extends ClassReport, R extends Report> ReportOutputData generate(C classReport, R report) {
+	public static <C extends NewClassReport, R extends NewReport> NewReportOutputData generate(C classReport, R report) {
 		return classReport.create(report);
 	}
 
@@ -41,7 +41,7 @@ public class JReportEngine implements Serializable {
 	 *            Implementação de Report correspondente.
 	 * @return OutputStream do relatório.
 	 */
-	public static <C extends ClassReport> String serialize(C classReport) {
+	public static <C extends NewClassReport> String serialize(C classReport) {
 		throw new UnsupportedOperationException("Não implementado");
 		// return classReport.serialization(classReport);
 	}
@@ -55,7 +55,7 @@ public class JReportEngine implements Serializable {
 	 *            Implementação de Report correspondente.
 	 * @return OutputStream do relatório.
 	 */
-	public static <C extends ClassReport, R extends Report> ReportOutputData deserialize(String serialized, R report) {
+	public static <C extends NewClassReport, R extends NewReport> NewReportOutputData deserialize(String serialized, R report) {
 		// desserialize(serialized);
 		// create report on report like: report.title().text(text)
 		throw new UnsupportedOperationException("Não implementado");

@@ -11,7 +11,7 @@ import java.util.Optional;
  *
  * @param <T>
  */
-public interface Datasource<T> extends Serializable {
+public interface NewDatasource<T> extends Serializable {
 
 	List<T> getList();
 
