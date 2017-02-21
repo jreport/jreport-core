@@ -9,6 +9,9 @@ import java.io.Serializable;
  */
 public interface NewColspanLine extends Serializable {
 
+	
+	NewColspanBody addHeadersColspan(Integer cols);
+	
 	/**
 	 * 
 	 */
