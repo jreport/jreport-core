@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface NewTextStyle<T> extends Serializable {
+public interface NewTextStyle extends Serializable {
 
 	void setColor(String color);
 
@@ -27,5 +27,4 @@ public interface NewTextStyle<T> extends Serializable {
 
 	void setFontStyle(String fontStyle);
 
-	T build();
 }
