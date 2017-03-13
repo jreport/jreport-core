@@ -1,7 +1,9 @@
-package br.jreport.core.api;
+package br.jreport.core.api.interfaces;
 
 import java.io.Serializable;
 import java.util.function.BiConsumer;
+
+import br.jreport.core.api.aux.NewTableRow;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package br.jreport.core.api;
+package br.jreport.core.api.interfaces;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author jcruz
  *
  */
-public interface NewImage extends Serializable {
+public interface NewText extends Serializable {
 	/**
 	 * 
 	 */

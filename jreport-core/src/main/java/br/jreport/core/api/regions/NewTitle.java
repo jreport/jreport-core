@@ -1,9 +1,14 @@
-package br.jreport.core.api;
+package br.jreport.core.api.regions;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
+import br.jreport.core.api.NewReport;
+import br.jreport.core.api.aux.NewTableRow;
 import br.jreport.core.api.datasource.NewDatasource;
+import br.jreport.core.api.interfaces.NewColspanBody;
 import br.jreport.core.api.property.NewTableProperty;
+import br.jreport.core.impl.Style;
 
 /**
  * Classe da região titulo
@@ -22,7 +27,9 @@ public interface NewTitle extends NewRegion {
 	 */
 	NewTitle addImage(String src);
 
-	NewTitle addImage(String src, String classe);
+	NewTitle addImage(String src, Optional<Style> classe);
+
+	NewTitle addBrasao();
 
 	/**
 	 * Definição de texto.
@@ -32,7 +39,7 @@ public interface NewTitle extends NewRegion {
 	 */
 	NewTitle addText(String text);
 
-	NewTitle addText(String text, String classe);
+	NewTitle addText(String text, Optional<Style> classe);
 
 	/**
 	 * 
@@ -59,7 +66,7 @@ public interface NewTitle extends NewRegion {
 	 */
 	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty);
 
-	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty, String classe);
+	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty, Optional<Style> classe);
 
 	/**
 	 * 
@@ -69,7 +76,7 @@ public interface NewTitle extends NewRegion {
 	 */
 	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty, BiConsumer<T, NewTableRow> eachRow);
 
-	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty, BiConsumer<T, NewTableRow> eachRow, String classe);
+	<T, A extends NewTableProperty<T>> NewTitle addTable(A tableProperty, BiConsumer<T, NewTableRow> eachRow, Optional<Style> classe);
 
 	/**
 	 * 
@@ -77,7 +84,7 @@ public interface NewTitle extends NewRegion {
 	 */
 	<T, D extends NewDatasource<T>> NewTitle addList(D datasource);
 
-	<T, D extends NewDatasource<T>> NewTitle addList(D datasource, String classe);
+	<T, D extends NewDatasource<T>> NewTitle addList(D datasource, Optional<Style> classe);
 
 	/**
 	 * 

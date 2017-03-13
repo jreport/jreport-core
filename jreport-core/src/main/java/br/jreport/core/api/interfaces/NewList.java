@@ -1,4 +1,4 @@
-package br.jreport.core.api;
+package br.jreport.core.api.interfaces;
 
 import java.io.Serializable;
 

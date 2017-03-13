@@ -1,4 +1,6 @@
-package br.jreport.core.api;
+package br.jreport.core.api.regions;
+
+import br.jreport.core.api.NewReport;
 
 public interface NewFooter extends NewRegion {
 

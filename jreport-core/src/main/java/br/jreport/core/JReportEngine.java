@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import br.jreport.core.api.NewClassReport;
 import br.jreport.core.api.NewReport;
-import br.jreport.core.api.NewReportOutputData;
+import br.jreport.core.api.aux.NewReportOutputData;
 
 /**
  * Classe motora de geração de relatórios.

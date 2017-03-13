@@ -2,6 +2,8 @@ package br.jreport.core.api;
 
 import java.io.Serializable;
 
+import br.jreport.core.api.aux.NewReportOutputData;
+
 /**
  * Classe que contem a estrutura de um relatorio Jreport.
  * 

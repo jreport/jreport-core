@@ -1,4 +1,4 @@
-package br.jreport.core.api;
+package br.jreport.core.api.aux;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package br.jreport.core.api;
+package br.jreport.core.api.style;
 
 import java.io.Serializable;
 
@@ -12,6 +12,8 @@ public interface NewTextStyle extends Serializable {
 	void setColor(String color);
 
 	void setTextAlign(String textAlign);
+	
+	void setTextAlignNumber(String textAlign);
 
 	void setTextDecoration(String textDecoration);
 
